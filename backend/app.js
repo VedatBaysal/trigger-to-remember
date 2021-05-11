@@ -1,9 +1,21 @@
-const express = require('express')
+import express from 'express'
+import dotenv from 'dotenv'
+import wordRoutes from './routes/wordRoutes.js'
+import connectDB from './config/db.js'
+
+dotenv.config()
+connectDB()
+
 const app = express()
-const port = 1212
+
+app.use(express.json())
+
+const port = process.env.PORT
+
+app.use('/api/word', wordRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello !')
 })
 
 app.listen(port, () => {
