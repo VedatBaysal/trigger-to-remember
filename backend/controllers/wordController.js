@@ -2,12 +2,12 @@ import asyncHandler from 'express-async-handler'
 import Word from '../models/wordModel.js'
 
 const getRandomWord = asyncHandler(async (req, res) => {
-  res.json({
-    test: 'test',
-  })
+  let n = await Word.count()
+  let r = Math.floor(Math.random() * n)
+  let randomElement = await Word.find().limit(1).skip(r)
+  res.json(randomElement)
 })
 const addWord = asyncHandler(async (req, res) => {
-  console.log(req.body)
   const { en, tr, type, trueCount, falseCount, frequency } = req.body
 
   const word = new Word({

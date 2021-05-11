@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "server": "nodemon ./backend/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server \" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/VedatBaysal/trigger-to-remember#readme",
   "dependencies": {
     "colors": "^1.4.0",
+    "concurrently": "^6.1.0",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
