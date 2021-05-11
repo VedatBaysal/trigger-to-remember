@@ -1,0 +1,22 @@
+{
+  "name": "trigger-to-remember",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VedatBaysal/trigger-to-remember.git"
+  },
+  "author": "Vedat Baysal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VedatBaysal/trigger-to-remember/issues"
+  },
+  "homepage": "https://github.com/VedatBaysal/trigger-to-remember#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
